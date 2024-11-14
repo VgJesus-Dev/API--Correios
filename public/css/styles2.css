@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="hidden"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box; 
+    width: 100%; 
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+input:focus {
+    border-color: #007bff;
+    background-color: #f9f9f9;
+}
+
+a.btn-delete {
+    display: inline-block; 
+    width: 100%;  
+    padding: 14px; 
+    background-color: #007bff; 
+    color: white;
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;  
+}
+
+a.btn-delete:hover {
+    background-color: #0056b3; 
+}
+
+
+@media (max-width: 768px) {
+    form {
+        padding: 20px 15px; 
+        width: 100%; 
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    input[type="submit"], 
+    a.btn-delete { 
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;  
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+        max-width: 100%; 
+    }
+
+    input[type="submit"], 
+    a.btn-delete { 
+        padding: 10px;
+        font-size: 14px;
+        width: 100%; 
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        padding: 8px; 
+        font-size: 14px;
+    }
+}

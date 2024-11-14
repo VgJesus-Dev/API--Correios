@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Alterar Cadastro</h1>
+<link rel="stylesheet" href="/css/styles2.css">
+
+<form action="/update-cliente" method="POST">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" value="<%= cliente.nome%>">
+    </div>
+
+    <div class="form-group">
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" value="<%= cliente.sobrenome %>" placeholder="Sobrenome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="<%= cliente.email %>" placeholder="Insira seu email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="whatsapp">WhatsApp:</label>
+        <input type="number" name="whatsapp" value="<%=cliente.whatsapp %>" placeholder="Insira o seu número de celular" required>
+    </div>
+
+    <div class="form-group">
+        <label for="cep">CEP:</label>
+        <input type="number" name="cep" value="<%=cliente.cep %>" placeholder="Insira o seu Cep" required>
+    </div>
+
+    <div class="form-group">
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" name="logradouro" value="<%=cliente.logradouro %>" placeholder="Insira o seu nome completo" required>
+    </div>
+
+    <div class="form-group">
+        <label for="numero">Número:</label>
+        <input type="text" name="numero" value="<%=cliente.numero %>" placeholder="Número do endereço" required>
+    </div>
+
+    <div class="form-group">
+        <label for="complemento">Complemento:</label>
+        <input type="text" name="complemento" value="<%=cliente.complemento %>" placeholder="Complemento" required>
+    </div>
+
+    <div class="form-group">
+        <label for="bairro">Bairro:</label>
+        <input type="text" name="bairro" value="<%=cliente.bairro %>" placeholder="Bairro" required>
+    </div>
+
+    <div class="form-group">
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" value="<%=cliente.cidade %>" placeholder="Cidade" required>
+    </div>
+
+    <div class="form-group">
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" value="<%=cliente.estado %>" placeholder="Estado" required>
+    </div>
+
+    <input type="hidden" name="codcliente" value="<%=cliente.codcliente%>">
+
+    <input type="submit" value="Alterar Cadastro">
+
+    <a href="/delete-cliente?codcliente= <%- cliente.codcliente %>" class="btn-delete">Excluir Cadastro</a>
+</form>
+</body>
+</html>
+
